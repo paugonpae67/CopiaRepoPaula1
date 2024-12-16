@@ -37,7 +37,7 @@ public class Test2 extends ReflexiveTest{
     @Test
     private void test2RoomConstraints() {
         OperatingRoom t=Test1.createValidRoom(em);
-        // checkThatFieldsAreMandatory(t, em,"validFor");        
+        //checkThatFieldsAreMandatory(t, em,"validFor");        
     }
 
     @Test

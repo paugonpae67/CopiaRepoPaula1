@@ -112,3 +112,15 @@ INSERT INTO surgery_type(id, name)
                (2, 'Bladder surgery');
 
 INSERT INTO surgery_type_susceptible_pet_types(surgery_type_id,susceptible_pet_types_id) VALUES (1,1),(1,2),(1,4),(2,1),(2,6);
+
+
+INSERT INTO operating_room(id, name, description) VALUES (1, 'Sala A', 'Sala de operaciones para perros y gatos'),
+                                                        (2, 'Sala B', 'Sala de operaciones para reptiles y tortugas');
+
+INSERT INTO surgery(id, name, description, surgery_date, room_id) VALUES (1, 'Dental extraction', null, '2023-12-16', 1),
+                                                                        (2,'Bladder surgery', 'Removal of a bladder stone.', '2023-12-17', 2);
+
+
+INSERT INTO surgery_surgery_team(surgery_id, surgery_team_id) VALUES (1,2), (1, 4), (2,1), (2,5);
+INSERT INTO pets_surgeries(pet_id, surgeries_id) VALUES (3,1), (1,2);
+INSERT INTO operating_room_valid_for(operating_room_id, valid_for_id) VALUES (1,1), (1,2), (2,3), (2,4), (2,7);

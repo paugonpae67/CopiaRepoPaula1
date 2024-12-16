@@ -3,7 +3,9 @@ package org.springframework.samples.petclinic.surgery;
 import java.util.List;
 import java.util.Optional;
 
-public interface SurgeryRepository {
+import org.springframework.data.repository.CrudRepository;
+
+public interface SurgeryRepository extends CrudRepository<Surgery, Integer>{
     Optional<Surgery> findById(Integer i);
 
     List<Surgery> findAll();

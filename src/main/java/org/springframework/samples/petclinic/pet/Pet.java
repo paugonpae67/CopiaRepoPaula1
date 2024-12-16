@@ -28,6 +28,7 @@ import org.springframework.samples.petclinic.surgery.Surgery;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToMany;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
@@ -62,6 +63,6 @@ public class Pet extends NamedEntity {
 	@OnDelete(action = OnDeleteAction.CASCADE)
 	protected Owner owner;
 
-	@Transient
+	@OneToMany
 	protected Set<Surgery> surgeries;
 }
